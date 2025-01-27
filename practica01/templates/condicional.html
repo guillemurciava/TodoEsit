@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inicio modificando presentasión en plantilla</title>
+  </head>
+  <body>
+    <h1>Bienvenido, {{user.name| upper}}!</h1>
+    <p>Tienes {{user.age}} años.</p>
+    {% if user.is_authenticated %}
+    <p>Bienvenido, {{ user.name }}!</p>
+    {% else %}
+    <p>Por favor, inicia sesión.</p>
+    {% endif %}
+    <p>La lista de articulos es:</p>
+    <ul>
+      {% for item in items %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
