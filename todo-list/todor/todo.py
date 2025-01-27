@@ -2,7 +2,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for, g
 #Agregando validacion
 from todor.auth import login_required 
-from models .models import Todo, User
+from .models import Todo, User
 from todor import db
 # Creando instancia
 bp = Blueprint('todo', __name__, url_prefix='/todo')
